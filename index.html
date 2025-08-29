@@ -18,16 +18,21 @@
     <header>
         <!-- nav section -->
 
-        <nav class="flex justify-between  mt-6 mx-16">
+        <nav class=" flex justify-between md:p-5  mt-6 mx-16">
             <div class="flex gap-2">
                 <img class="h-12 w-12" src="./assets/logo.png" alt="">
-                <h2 class="text-[#006747] h-11 w-32 font-bold">Emergency Service</h2>
+                <h2 class="text-[#006747] h-11 w-32 md:text-2xl font-bold">Emergency Service</h2>
                  
             </div>
             <div class="flex  gap-5 ">
-                <i class="bg-[#41FF6B1A] justify-center items-center rounded-full flex h-12 w-24 gap-3"><span class="font-extrabold">0</span><img class="h-7 w-7" src="./assets/heart.png" alt=""></i>
-                <i class="bg-[#41FF6B1A] justify-center items-center rounded-full flex h-12 w-24 gap-3 font-extrabold"><span>100</span><img class="h-6 w-6" src="./assets/coin.png" alt=""></i>
-                <i class="bg-[#00A63E]  justify-center items-center gap-2 rounded-full font-semibold flex h-12 w-32 text-[#FFFFFF] "><span>2</span>Copy</i>
+
+                <i class="bg-[#41FF6B1A] justify-center items-center rounded-full flex h-12 w-24 gap-3"><span id="heartCounter" class="font-extrabold">0</span><img class="h-7 w-7" src="./assets/heart.png" alt=""></i>
+
+
+                <i class="bg-[#41FF6B1A] justify-center items-center rounded-full flex h-12 w-24 gap-3 font-extrabold"><span id="totalCoins">100</span><img class="h-6 w-6" src="./assets/coin.png" alt=""></i>
+
+
+                <i class="bg-[#00A63E]  justify-center items-center gap-2 rounded-full font-semibold flex h-12 w-32 text-[#FFFFFF] "><span id="copyCount">2</span>Copy</i>
 
             </div>
 
@@ -35,9 +40,12 @@
 
         <!-- banner section -->
 
-        <div class="bg-green-900 mt-6 h-[239px] mx-w-full  ">
+        <div class="bg-green-900 mt-6 h-[239px] max-w-full md:max-w-full  ">
+
             <div class="flex flex-col items-center justify-center py-3 px-14 gap-y-3">
+
                 <img class="h-24 w-24" src="./assets/logo-dark.png" alt="">
+
                 <h1 class="text-[#FFFFFF] text-4xl font-bold">Emergency Service Directory</h1>
                 <p class="text-[#FFFFFF] text-sm font-semibold">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
             </div>
@@ -48,29 +56,34 @@
 
     <main>
         <section class="w-11/12 mx-auto py-10 grid grid-cols-12 gap-8 ">
-            <section class=" col-span-9 grid grid-cols-3 gap-8 ">
+            <section class=" col-span-9 flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
                 <!-- card 1 -->
                 <section class="bg-white shadow-lg  h-[360px] w-[435px] p-8 rounded-[12px] flex-col">
                    <div class="flex justify-between items-center">
                        <img class="h-[60px] w-[60px] p-4 rounded-[16px] bg-[#ffe3e2]" src="./assets/emergency.png" alt="">
 
-                        <button class="btn">
+                        <button id="" class="btn heart-btn">
                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-[1.2em]"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
                         </button>
 
                     </div>
                     <br>
+
+
                     <div>
-                     <h1 class="h-[32px] w-[372px] font-semibold text-black">National Emergency Number</h1>
-                     <p class="h-[21px] w-[372px] font-normal text-[#5c5c5c]">National Emergency</p>
+                     <h1 class="h-[32px] w-[372px] font-semibold text-black service-name ">National Emergency Number</h1>
+                     <p class="h-[21px] w-[372px] font-normal text-[#5c5c5c] ">National Emergency</p>
                      <br>
-                     <h1 class="h-[32px] w-[372px] font-bold text-black">999</h1>
+
+                     <h1 class="h-[32px] w-[372px] font-bold text-black"><span class="service-number">999</span></h1>
+
                      <p class="h-[37px] w-[53px] bg-[#f2f2f2] rounded-[9999px] py-[6px] px-4">All</p>
                     </div>
                     <br>
                    <div class="mt-2 flex gap-2">
-                     <button class="h-[40px] w-[182px] border-[#d4d6d5] shadow-md rounded-[8px] bg-white"><i class="fa-regular fa-clone"></i> Copy</button>
-                     <button class="bg-[#00a63e] h-[40px] w-[182px] rounded-[8px]  text-white  text-sm shadow-sm  "><i class="fa-solid fa-phone"></i> Call</button>
+                     <button  class="h-[40px] w-[182px] border-[#d4d6d5] shadow-md rounded-[8px] bg-white copy-btn"><i class="fa-regular fa-clone "></i> Copy</button>
+
+                     <button class="bg-[#00a63e] h-[40px] w-[182px] rounded-[8px]  text-white  text-sm shadow-sm call-btn"><i class="fa-solid fa-phone"></i> Call</button>
                    </div>
                 
                 </section>
@@ -79,23 +92,23 @@
                    <div class="flex justify-between items-center">
                        <img class="h-[60px] w-[60px] p-4 rounded-[16px] bg-[#dfefff]" src="./assets/police.png" alt="">
 
-                        <button class="btn">
+                        <button id="" class="btn heart-btn">
                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-[1.2em]"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
                         </button>
 
                     </div>
                     <br>
                     <div>
-                     <h1 class="h-[32px] w-[372px] font-semibold text-black">Police Helpline Number</h1>
+                     <h1 class="h-[32px] w-[372px] font-semibold text-black service-name ">Police Helpline Number</h1>
                      <p class="h-[21px] w-[372px] font-normal text-[#5c5c5c]">Police</p>
                      <br>
-                     <h1 class="h-[32px] w-[372px] font-bold text-black">999</h1>
+                     <h1 class="h-[32px] w-[372px] font-bold text-black "><span class ="service-number">999</span></h1>
                      <p class="h-[37px] w-[79px] bg-[#f2f2f2] rounded-[9999px] py-[6px] px-4">Police</p>
                     </div>
                     <br>
                    <div class="mt-2 flex gap-2">
-                     <button class="h-[40px] w-[182px] border-[#d4d6d5] shadow-md rounded-[8px] bg-white"><i class="fa-regular fa-clone"></i> Copy</button>
-                     <button class="bg-[#00a63e] h-[40px] w-[182px] rounded-[8px]  text-white  text-sm shadow-sm  "><i class="fa-solid fa-phone"></i> Call</button>
+                     <button class="h-[40px] w-[182px] border-[#d4d6d5] shadow-md rounded-[8px] bg-white copy-btn"><i class="fa-regular fa-clone"></i> Copy</button>
+                     <button class="bg-[#00a63e] h-[40px] w-[182px] rounded-[8px]  text-white  text-sm shadow-sm call-btn"><i class="fa-solid fa-phone"></i> Call</button>
                    </div>
                 
                 </section>
@@ -104,23 +117,23 @@
                    <div class="flex justify-between items-center">
                        <img class="h-[60px] w-[60px] rounded-[16px] bg-[#ffe3e2] p-4" src="./assets/fire-service.png" alt="">
 
-                        <button class="btn">
+                        <button class="btn heart-btn">
                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-[1.2em]"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
                         </button>
 
                     </div>
                     <br>
                     <div>
-                     <h1 class="h-[32px] w-[372px] font-semibold text-black">Fire Service Number</h1>
+                     <h1 class="h-[32px] w-[372px] font-semibold text-black service-name ">Fire Service Number</h1>
                      <p class="h-[21px] w-[372px] font-normal text-[#5c5c5c]">Fire Service</p>
                      <br>
-                     <h1 class="h-[32px] w-[372px] font-bold text-black">999</h1>
+                     <h1 class="h-[32px] w-[372px] font-bold text-black"><span class="service-number">999</span></h1>
                      <p class="h-[37px] w-[53px] bg-[#f2f2f2] rounded-[9999px] py-[6px] px-4">Fire</p>
                     </div>
                     <br>
                    <div class="mt-2 flex gap-2">
-                     <button class="h-[40px] w-[182px] border-[#d4d6d5] shadow-md rounded-[8px] bg-white"><i class="fa-regular fa-clone"></i> Copy</button>
-                     <button class="bg-[#00a63e] h-[40px] w-[182px] rounded-[8px]  text-white  text-sm shadow-sm  "><i class="fa-solid fa-phone"></i> Call</button>
+                     <button class="h-[40px] w-[182px] border-[#d4d6d5] shadow-md rounded-[8px] bg-white copy-btn"><i class="fa-regular fa-clone"></i> Copy</button>
+                     <button class="bg-[#00a63e] h-[40px] w-[182px] rounded-[8px]  text-white  text-sm shadow-sm call-btn"><i class="fa-solid fa-phone"></i> Call</button>
                    </div>
                 
                 </section>
@@ -129,23 +142,23 @@
                    <div class="flex justify-between items-center">
                        <img class="h-[60px] w-[60px] p-4 rounded-[16px] bg-[#ffe3e2]" src="./assets/ambulance.png" alt="">
 
-                        <button class="btn">
+                        <button class="btn heart-btn">
                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-[1.2em]"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
                         </button>
 
                     </div>
                     <br>
                     <div>
-                     <h1 class="h-[32px] w-[372px] font-semibold text-black">Ambulance Service</h1>
+                     <h1 class="h-[32px] w-[372px] font-semibold text-black service-name ">Ambulance Service</h1>
                      <p class="h-[21px] w-[372px] font-normal text-[#5c5c5c]">Ambulance</p>
                      <br>
-                     <h1 class="h-[32px] w-[372px] font-bold text-black">1994-999999</h1>
+                     <h1 class="h-[32px] w-[372px] font-bold text-black"><span class="service-number">1994-999999</span></h1>
                      <p class="h-[37px] w-[83px] bg-[#f2f2f2] rounded-[9999px] py-[6px] px-4">Health</p>
                     </div>
                     <br>
                    <div class="mt-2 flex gap-2">
-                     <button class="h-[40px] w-[182px] border-[#d4d6d5] shadow-md rounded-[8px] bg-white"><i class="fa-regular fa-clone"></i> Copy</button>
-                     <button class="bg-[#00a63e] h-[40px] w-[182px] rounded-[8px]  text-white  text-sm shadow-sm  "><i class="fa-solid fa-phone"></i> Call</button>
+                     <button class="h-[40px] w-[182px] border-[#d4d6d5] shadow-md rounded-[8px] bg-white copy-btn"><i class="fa-regular fa-clone"></i> Copy</button>
+                     <button class="bg-[#00a63e] h-[40px] w-[182px] rounded-[8px]  text-white  text-sm shadow-sm call-btn"><i class="fa-solid fa-phone"></i> Call</button>
                    </div>
                 
                 </section>
@@ -154,23 +167,23 @@
                    <div class="flex justify-between items-center">
                        <img class="h-[60px] w-[60px] p-4 rounded-[16px] bg-[#ffe3e2]" src="./assets/emergency.png" alt="">
 
-                        <button class="btn">
+                        <button class="btn heart-btn">
                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-[1.2em]"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
                         </button>
 
                     </div>
                     <br>
                     <div>
-                     <h1 class="h-[32px] w-[372px] font-semibold text-black">Women & Child Helpline</h1>
+                     <h1 class="h-[32px] w-[372px] font-semibold text-black service-name">Women & Child Helpline</h1>
                      <p class="h-[21px] w-[372px] font-normal text-[#5c5c5c]">Women & Child Helpline</p>
                      <br>
-                     <h1 class="h-[32px] w-[372px] font-bold text-black">109</h1>
+                     <h1 class="h-[32px] w-[372px] font-bold text-black "><span class="service-number">109</span></h1>
                      <p class="h-[37px] w-[68px] bg-[#f2f2f2] rounded-[9999px] py-[6px] px-4">Help</p>
                     </div>
                     <br>
                    <div class="mt-2 flex gap-2">
-                     <button class="h-[40px] w-[182px] border-[#d4d6d5] shadow-md rounded-[8px] bg-white"><i class="fa-regular fa-clone"></i> Copy</button>
-                     <button class="bg-[#00a63e] h-[40px] w-[182px] rounded-[8px]  text-white  text-sm shadow-sm  "><i class="fa-solid fa-phone"></i> Call</button>
+                     <button class="h-[40px] w-[182px] border-[#d4d6d5] shadow-md rounded-[8px] bg-white copy-btn"><i class="fa-regular fa-clone"></i> Copy</button>
+                     <button class="bg-[#00a63e] h-[40px] w-[182px] rounded-[8px]  text-white  text-sm shadow-sm call-btn"><i class="fa-solid fa-phone"></i> Call</button>
                    </div>
                 
                 </section>
@@ -179,23 +192,23 @@
                    <div class="flex justify-between items-center">
                        <img class="h-[60px] w-[60px] p-4 rounded-[16px] bg-[#ffe3e2]" src="./assets/emergency.png" alt="">
 
-                        <button class="btn">
+                        <button class="btn heart-btn">
                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-[1.2em]"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
                         </button>
 
                     </div>
                     <br>
                     <div>
-                     <h1 class="h-[32px] w-[372px] font-semibold text-black">Anti-Corruption Helpline</h1>
+                     <h1 class="h-[32px] w-[372px] font-semibold text-black service-name ">Anti-Corruption Helpline</h1>
                      <p class="h-[21px] w-[372px] font-normal text-[#5c5c5c]">Anti-Corruption</p>
                      <br>
-                     <h1 class="h-[32px] w-[372px] font-bold text-black">106</h1>
+                     <h1 class="h-[32px] w-[372px] font-bold text-black "><span class="service-number">106</span></h1>
                      <p class="h-[37px] w-[73px] bg-[#f2f2f2] rounded-[9999px] py-[6px] px-4">Govt.</p>
                     </div>
                     <br>
                    <div class="mt-2 flex gap-2">
-                     <button class="h-[40px] w-[182px] border-[#d4d6d5] shadow-md rounded-[8px] bg-white"><i class="fa-regular fa-clone"></i> Copy</button>
-                     <button class="bg-[#00a63e] h-[40px] w-[182px] rounded-[8px]  text-white  text-sm shadow-sm  "><i class="fa-solid fa-phone"></i> Call</button>
+                     <button class="h-[40px] w-[182px] border-[#d4d6d5] shadow-md rounded-[8px] bg-white copy-btn"><i class="fa-regular fa-clone"></i> Copy</button>
+                     <button class="bg-[#00a63e] h-[40px] w-[182px] rounded-[8px]  text-white  text-sm shadow-sm call-btn"><i class="fa-solid fa-phone"></i> Call</button>
                    </div>
                 
                 </section>
@@ -204,23 +217,23 @@
                    <div class="flex justify-between items-center">
                        <img class="h-[60px] w-[60px] p-4 rounded-[16px] bg-[#ffe3e2]" src="./assets/emergency.png" alt="">
 
-                        <button class="btn">
+                        <button class="btn heart-btn">
                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-[1.2em]"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
                         </button>
 
                     </div>
                     <br>
                     <div>
-                     <h1 class="h-[32px] w-[372px] font-semibold text-black">Electricity Helpline</h1>
+                     <h1 class="h-[32px] w-[372px] font-semibold text-black service-name">Electricity Helpline</h1>
                      <p class="h-[21px] w-[372px] font-normal text-[#5c5c5c]">Electricity Outage</p>
                      <br>
-                     <h1 class="h-[32px] w-[372px] font-bold text-black">16216</h1>
+                     <h1 class="h-[32px] w-[372px] font-bold text-black "><span class="service-number">16216</span></h1>
                      <p class="h-[37px] w-[109px] bg-[#f2f2f2] rounded-[9999px] py-[6px] px-4">Electricity</p>
                     </div>
                     <br>
                    <div class="mt-2 flex gap-2">
-                     <button class="h-[40px] w-[182px] border-[#d4d6d5] shadow-md rounded-[8px] bg-white"> <i class="fa-regular fa-clone"></i> Copy</button>
-                     <button class="bg-[#00a63e] h-[40px] w-[182px] rounded-[8px]  text-white  text-sm shadow-sm  "><i class="fa-solid fa-phone"></i> Call</button>
+                     <button class="h-[40px] w-[182px] border-[#d4d6d5] shadow-md rounded-[8px] bg-white copy-btn"> <i class="fa-regular fa-clone"></i> Copy</button>
+                     <button class="bg-[#00a63e] h-[40px] w-[182px] rounded-[8px]  text-white  text-sm shadow-sm call-btn"><i class="fa-solid fa-phone"></i> Call</button>
                    </div>
                 
                 </section>
@@ -229,23 +242,24 @@
                    <div class="flex justify-between items-center">
                        <img class="h-[60px] w-[60px] p-4 rounded-[16px]  bg-pink-100" src="./assets/brac.png" alt="">
 
-                        <button class="btn">
+                        <button class="btn heart-btn">
                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-[1.2em]"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
                         </button>
 
                     </div>
                     <br>
                     <div>
-                     <h1 class="h-[32px] w-[372px] font-semibold text-black">Brac Helpline</h1>
+
+                     <h1 class="h-[32px] w-[372px] font-semibold text-black service-name ">Brac Helpline</h1>
                      <p class="h-[21px] w-[372px] font-normal text-[#5c5c5c]">Brac</p>
                      <br>
-                     <h1 class="h-[32px] w-[372px] font-bold text-black">16445</h1>
+                     <h1 class="h-[32px] w-[372px] font-bold text-black "><span class="service-number">16445</span></h1>
                      <p class="h-[37px] w-[69px] bg-[#f2f2f2] rounded-[9999px] py-[6px] px-4">NGO</p>
                     </div>
                     <br>
                    <div class="mt-2 flex gap-2">
-                     <button class="h-[40px] w-[182px] border-[#d4d6d5] shadow-md rounded-[8px] bg-white"><i class="fa-regular fa-clone"></i> Copy</button>
-                     <button class="bg-[#00a63e] h-[40px] w-[182px] rounded-[8px]  text-white  text-sm shadow-sm  "><i class="fa-solid fa-phone"></i> Call</button>
+                     <button class="h-[40px] w-[182px] border-[#d4d6d5] shadow-md rounded-[8px] bg-white copy-btn"><i class="fa-regular fa-clone"></i> Copy</button>
+                     <button class="bg-[#00a63e] h-[40px] w-[182px] rounded-[8px]  text-white  text-sm shadow-sm call-btn"><i class="fa-solid fa-phone"></i> Call</button>
                    </div>
                 
                 </section>
@@ -254,23 +268,23 @@
                    <div class="flex justify-between items-center">
                        <img class="h-[60px] w-[60px] p-4 rounded-[16px] bg-[#ffe3e2]" src="./assets/Bangladesh-Railway.png" alt="">
 
-                        <button class="btn">
+                        <button class="btn heart-btn">
                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-[1.2em]"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
                         </button>
 
                     </div>
                     <br>
                     <div>
-                     <h1 class="h-[32px] w-[372px] font-semibold text-black">Bangladesh Railway Helpline </h1>
+                     <h1 class="h-[32px] w-[372px] font-semibold text-black service-name ">Bangladesh Railway Helpline </h1>
                      <p class="h-[21px] w-[372px] font-normal text-[#5c5c5c]">Bangladesh Railway</p>
                      <br>
-                     <h1 class="h-[32px] w-[372px] font-bold text-black">163</h1>
+                     <h1 class="h-[32px] w-[372px] font-bold text-black "><span class="service-number">163</span></h1>
                      <p class="h-[37px] w-[79px] bg-[#f2f2f2] rounded-[9999px] py-[6px] px-4">Travel</p>
                     </div>
                     <br>
                    <div class="mt-2 flex gap-2">
-                     <button class="h-[40px] w-[182px] border-[#d4d6d5] shadow-md rounded-[8px] bg-white"><i class="fa-regular fa-clone"></i> Copy</button>
-                     <button class="bg-[#00a63e] h-[40px] w-[182px] rounded-[8px]  text-white  text-sm shadow-sm  "><i class="fa-solid fa-phone"></i> Call</button>
+                     <button class="h-[40px] w-[182px] border-[#d4d6d5] shadow-md rounded-[8px] bg-white copy-btn"><i class="fa-regular fa-clone"></i> Copy</button>
+                     <button class="bg-[#00a63e] h-[40px] w-[182px] rounded-[8px]  text-white  text-sm shadow-sm call-btn"><i class="fa-solid fa-phone"></i> Call</button>
                    </div>
                 
                 </section>
@@ -290,8 +304,12 @@
 
                     <div>
                     
-                        <button class="w-[114px] h-[52px] py-3 px-9 bg-[#00A63E] rounded-[50px] text-white font-semibold">Clear</button>
+                        <button id="clearHistory" class="w-[114px] h-[52px] py-3 px-9 bg-[#00A63E] rounded-[50px] text-white font-semibold ">Clear</button>
                     </div>
+                </div>
+                <div id="callHistory" class="mt-10">
+                    
+
                 </div>
 
             </aside>
@@ -300,6 +318,10 @@
         </section>
 
     </main>
+
+
+    <!-- js script -->
+     <script src="./index.js"></script>
 
 </body>
 </html>
